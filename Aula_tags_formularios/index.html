@@ -17,6 +17,7 @@
 
     <body>
 
+        
         <!-- CABEÇALHO -->
         <header>
             <!-- LOGO -->
@@ -36,81 +37,14 @@
                     <li>
                         <a href="">Blog</a>
                     </li>
-
-                    <li>
-                        <a href="./quemsomos.html">Quem Somos</a>
-                    </li>
-                    <li>
-                        <a href="https://kenzie.com.br/blog/modelagem-de-dados/">Site da Kenzie</a>
-                    </li>
                 </ul>
             </nav>
-
-            <div>
-                <img src="" alt="">
-                <p>Nome</p>
-                <a href="">Login</a>
-            </div>
 
         </header>
 
         <!-- CONTEÚDO PRINCIPAL -->
         <main>
 
-
-            <section>
-                <h2>Blusas</h2>
-
-                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum culpa incidunt, officia quos exercitationem quo molestiae tempora beatae! Enim provident quas hic atque rerum ipsam! Sed ratione recusandae eos porro.</article>
-
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-
-            </section>
-
-
-            <section>
-                <h2>Serviços</h2>
-                <article>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, nobis molestias? Repellendus illum placeat eum ad ullam libero expedita a eos, sapiente ut tenetur ea vitae culpa eaque fuga ducimus?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, nobis molestias? Repellendus illum placeat eum ad ullam libero expedita a eos, sapiente ut tenetur ea vitae culpa eaque fuga ducimus?</p>
-                </article>
-           
-                <h3>Confira os nossos serviços</h3>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
 
             <!-- ARTIGO -->
             <article>
@@ -124,11 +58,9 @@
                 <!-- SEÇÃO -->
                 <div>
                      <section> 
-                        
                         <h2>O que é sistema operacional?</h2>
-                        <p>O sistema operacional nada mais é do que o programa mais.  </p>
-                        <p>importante para ser executado em um computador. Esse programa permite ao usuário a opção de usar o equipamento, realizando diversas tarefas, como redigir textos ou fazer cálculos. Ele também é conhecido como SO e é instalado no disco rígido do computador, possibilitando que os dispositivos da máquina executem programas e se comuniquem.</p>
-                        <p>Ou seja, sem um sistema operacionaltanto o  quanto os demais programas ali existentes seriam praticamente inutilizáveis. </p>
+                        <p>O sistema operacional nada mais é do que o programa mais importante para ser executado em um computador. Esse programa permite ao usuário a opção de usar o equipamento, realizando diversas tarefas, como redigir textos ou fazer cálculos. Ele também é conhecido como SO e é instalado no disco rígido do computador, possibilitando que os dispositivos da máquina executem programas e se comuniquem. </p>
+                        <p>Ou seja, sem um sistema operacional tanto o computador quanto os demais programas ali existentes seriam praticamente inutilizáveis. </p>
                         
                         <h3>Primeira geração</h3>
                         <p>Nos anos 50 surgiram os primeiros sistemas operacionais, em 1953 a IMB lançou o computador IMBM701 com o primeiro sistema operacional, chamado monitor.</p>
@@ -183,16 +115,40 @@
 
             </aside>
 
-
             <section>
                 <h2>Entre em contato</h2>
-                <form action="">
 
-                    <input type="text">
+                <form>
+
+                    <fieldset>
+                        <legend>Formulário de contato</legend>
+
+                        <div class="input-model">
+                            <label for="nomeCompletoId">Nome completo</label>
+                            <input type="text" name="nomeCompleto" placeholder="Nome completo" id="nomeCompletoId" required>
+                        </div>
+                        
+                        <div class="input-model">
+                            <label for="emailId">E-mail</label>
+                            <input type="text" name="email" placeholder="E-mail" id="emailId" required>
+                        </div>
+
+                        <div class="input-model">>
+                            <label for="mensagemId">Mensagem</label>
+                            <textarea name="mensagem" id="mensagemId"></textarea>
+                        </div>
+
+                        <input type="submit" value="Enviar">
+
+                    </fieldset>
+
                 </form>
+
+
             </section>
 
         </main>
+
 
 
         <!-- RODAÉ -->
@@ -202,28 +158,3 @@
 
     </body>
 </html>
-
-
-<!-- 
-
-    Elemento de linha
-    small  
-    span  
-    a.link
-    em
-    strong
-    
-    Elemento de bloco
-    div
-    p
-    section 
-    article
-    main
-    header
-    footer
-    ul
-    li
-    h1,h2...
-
-
- -->
