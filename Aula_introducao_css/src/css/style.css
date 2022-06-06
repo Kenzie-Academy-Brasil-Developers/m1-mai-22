@@ -1,0 +1,62 @@
+/* 
+
+
+//SELETORES
+//ESCOPO
+//PROPRIEDADE
+//VALOR
+//REGRA CSS
+ELEMENTO(DIV,P,H1,H2){
+
+    CORTEXTO:VERMELHA;
+
+}
+*/
+
+/* 
+SELETORES 
+- NOME      => NOME DA TAG 
+- CLASSE    => PASSA NOME ALTERNATIVO
+- ID        => IDENTIFICADOR UNICO
+
+https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb
+
+*/
+
+
+p{
+    /* ELEMENTO */
+    background-color: black;
+    border: solid red 2px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    margin:0 auto;
+
+
+    /* TEXTO */
+    color:#fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 28px;
+    font-style: italic;
+    font-family: 'Times New Roman';
+    font-weight: 100;
+  
+}
+
+
+div{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+
+a{
+  background-color: aquamarine;  
+  text-align: center;
+}
