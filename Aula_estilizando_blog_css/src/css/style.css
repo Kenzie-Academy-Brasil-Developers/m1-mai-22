@@ -1,0 +1,39 @@
+
+/*  https://fonts.google.com/*/
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* CABEÇALHO */
+header.cabecalho{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* LOGO */
+header.cabecalho .cabecalho__logo{
+    display: inline-block;
+}
+header.cabecalho .cabecalho__logo img{
+    width: 221px;
+}
+
+
+
+/* MENU */
+header.cabecalho nav{
+    display: inline-block;
+    vertical-align: top;
+}
+header.cabecalho .cabecalho__menu{
+    padding-top: 20px;
+}
+header.cabecalho .cabecalho__menu li{
+    display: inline-block;
+    margin: 0 30px;
+}   
+header.cabecalho .cabecalho__menu a{
+    font-weight: 400;
+}
