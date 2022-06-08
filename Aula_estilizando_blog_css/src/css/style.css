@@ -7,14 +7,24 @@
     padding: 30px 20px;
 }
 
+.container-large{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
 /* CABEÇALHO */
 header.cabecalho{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+header.cabecalho .container{
+    display: flex;
+}
+
 /* LOGO */
 header.cabecalho .cabecalho__logo{
-    display: inline-block;
+   
 }
 header.cabecalho .cabecalho__logo img{
     width: 221px;
@@ -24,16 +34,99 @@ header.cabecalho .cabecalho__logo img{
 
 /* MENU */
 header.cabecalho nav{
-    display: inline-block;
-    vertical-align: top;
+    width: 100%;
+    
 }
 header.cabecalho .cabecalho__menu{
     padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 header.cabecalho .cabecalho__menu li{
-    display: inline-block;
+  
     margin: 0 30px;
 }   
 header.cabecalho .cabecalho__menu a{
     font-weight: 400;
 }
+
+
+main{
+    padding-top: 130px;
+}
+main article{}
+main article h1{
+    color: #0000FF;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+main article p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2D2D2D;
+    margin-bottom: 20px;
+}
+main article img{
+    width: 100%;
+    margin: 112px 0 23px;
+   
+}
+main article figcaption{
+    display: none;
+}
+
+main article section{
+    max-width: 648px;
+    margin:0 auto;
+}
+main article section h2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2D2D2D;
+    margin-bottom: 20px;
+}
+main article section strong{}
+
+
+aside{
+    background: #0404FF;
+    height: 239px;
+    margin-top: 230px;
+}
+aside ul{
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-210px);
+}
+aside ul li{
+    width: 320.35px;
+    min-height: 291px;
+    background: #F5F5F5;
+    border-radius: 16px;
+    padding-bottom: 30px;
+}
+aside ul li a{}
+aside ul li img{
+    display: block;
+    width: 100%;
+    margin-bottom: 37px;
+}
+aside ul li h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 22px;
+    color: #2D2D2D;
+    padding: 0 20px 15px;
+}
+aside ul li span{
+    padding: 0 20px;
+}
+
+
