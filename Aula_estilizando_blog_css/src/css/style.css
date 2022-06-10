@@ -47,9 +47,16 @@ header.cabecalho .cabecalho__menu li{
   
     margin: 0 30px;
 }   
+
 header.cabecalho .cabecalho__menu a{
     font-weight: 400;
 }
+
+header.cabecalho .cabecalho__menu li:nth-child(3) a{
+    background-color: #0404FF;
+    color: #fff;
+    padding: 10px;
+} 
 
 
 main{
@@ -128,5 +135,6 @@ aside ul li h3{
 aside ul li span{
     padding: 0 20px;
 }
+
 
 

@@ -1,0 +1,183 @@
+/*
+Theme Name: Página de vagas
+Theme URI: http://www.hudsoncarolino.com.br
+Author: Hudson Carolino
+Author URI: https://hudsoncarolino.com.br;
+Description: Descrição do thema.
+Version: 1.0
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+https://www.w3schools.com/css/css_outline.asp
+http://getbem.com/introduction/
+https://cssbattle.dev/
+*/
+
+/*DECLARAÇÃO DE VARIÁVEIS*/
+
+/*ESTILOS GERAIS*/
+html, body, figure, header,img, div, section, article, input, button, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* outline: none; */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/*BODY*/
+body,html{
+    background-color: #f1f3f5;
+}
+
+/*HEADER*/
+.cabecalho{
+    min-height: 562px;
+    /* background-image: url("./../img/banner_fundo.png"); */
+    background-image: linear-gradient(#19017AE5,#19017AE5), url("./../img/banner_fundo.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/* .cabecalho > .fundo{
+    background-color: #19017AE5;
+    min-height: 562px;
+} */
+.cabecalho .cabecalho__logo{
+    padding-top: 68px;
+}
+.cabecalho .cabecalho__logo img{}
+
+.cabecalho .cabecalho__descricao{
+    color: #fff;
+    margin-top: 59px;
+}
+.cabecalho .cabecalho__descricao h1{
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+.cabecalho .cabecalho__descricao p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+}
+.cabecalho .cabecalho__descricao a{
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    width: 296px;
+    height: 48px;
+    background-color: #BC00FF;
+    border: 2px solid #BC00FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalho .cabecalho__descricao a:hover{
+    background-color: #9a06cf;
+}
+
+/*FOOTER*/
+/*PÁGINA INICIAL*/
+.pg-inicial{}
+.pg-inicial .container{
+    display: flex;
+}
+.pg-inicial .container .coluna{
+    width: 60%;
+}
+
+.pg-inicial .container .coluna ~ .coluna{
+    width: 40%;
+}
+
+.pg-inicial .secao__vagas{
+    padding-top: 45px;
+}
+.pg-inicial .secao__vagas h2{
+    font-weight: 600;
+    font-size: 22px;
+    color: #212529;
+    margin-bottom: 54px;
+}
+.pg-inicial .secao__vagas .lista__vagas{}
+.pg-inicial .secao__vagas .lista__vaga{
+    padding: 30px;
+    background-color: #fff;
+    max-width: 850px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    border: solid  transparent 3px;
+}
+.pg-inicial .secao__vagas .lista__vaga:hover{
+    border-color: rgb(255, 206, 206) ;
+}
+.pg-inicial .secao__vagas .lista__vaga h3{
+    font-weight: 600;
+    font-size: 22px;
+    color: #212529;
+    margin-bottom: 18px;
+}
+.pg-inicial .secao__vagas .lista__vaga span{
+    font-weight: 400;
+    font-size: 14px;
+    color: #343A40;
+    display: block;
+    margin-top: 18px;
+}
+.pg-inicial .secao__vagas .lista__vaga p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #343A40;
+    margin-bottom: 28px;
+}
+.pg-inicial .secao__vagas .lista__vaga .btn{
+    display: flex;
+    justify-content: space-between;
+}
+.pg-inicial .secao__vagas .lista__vaga .btn button{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    background: #DEE2E6;
+    border-radius: 8px;
+    width: 111px;
+    height: 30px;
+    cursor: pointer;
+}
+.pg-inicial .secao__vagas .lista__vaga .btn button ~ button{
+    background: #BC00FF;
+    width: 150px;
+    height: 38px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+/*EXTRAS*/
+/*@MEDIA*/
+
+
+
