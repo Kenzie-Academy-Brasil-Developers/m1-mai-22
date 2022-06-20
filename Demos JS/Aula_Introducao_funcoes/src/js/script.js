@@ -143,23 +143,108 @@
 //IDADE
 //VERIFICAÇÃO
 //RETURN 
-//DECLARAÇÃO
-function verificaMaiorIdade(idade){
-  
-   
-    if(idade >= 18){
-        
-        return "Atingiu maior idade"
 
-    }
- 
+
+//DECLARAÇÃO
+// function verificaParImpar(numero){
+
+//     if(numero % 2 == 0){
+
+//        return true
+
+//     }else{
+        
+//         return false
+
+//     }
     
-    return "Não atingiu maior idade"
+// }
+
+
+
+
+//CHAMADA DE FUNÇÃO
+// let resultado = verificaParImpar(2)
+
+
+// function maiorIdade(idade){
+    
+//     if(idade >= 18){
+
+//         return true
+
+//     }else{
+
+//         return false
+
+//     }
+// }
+
+// let resultado = maiorIdade(20) 
+// console.log(resultado)
+
+function receberValorUsuario(){
+    let totalCompra     = prompt("Valor total da compra")
+    let valorFrete      = prompt("Valor total do frete")
+
+    let reasult1  = descontoFrete(totalCompra,valorFrete)
+    console.log(reasult1)
     
 }
 
-//CHAMADA DE FUNÇÃO
+receberValorUsuario()
 
+  
+function descontoFrete(total, frete){
+    
+    //FRETE GRATIS 
+    if(total >= 500){
+
+        return total
+
+    } else if(total >= 200){
+
+        return total + (frete - 25)
+
+    }else{
+
+        return  total + frete
+
+    }
+
+}
+
+
+
+
+
+
+
+function soma(num1, num2){
+    return num1 + num2
+}
+
+function subtracao(num1, num2){
+    return num1 - num2
+}
+
+
+
+function calculadora(operacao, num1, num2){
+
+    let resultado = 0
+    if(operacao == "+"){
+
+        resultado = soma(num1, num2)
+        console.log(resultado)
+    }else if(operacao == "-"){
+
+        resultado = subtracao(num1, num2)
+        console.log(resultado) 
+    }
+    
+}
+calculadora("+", 1,1)
 
 
 
