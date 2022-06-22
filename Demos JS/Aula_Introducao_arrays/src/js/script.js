@@ -10,6 +10,7 @@
 //             true
 //ENQUANTO(condicional){}
 
+
 // let cont = 0
 
 // while(cont <= 10){
@@ -17,17 +18,23 @@
    
 //     console.log(cont)
 //     cont++
-    
    
+   
+// }
+//
+
+// for(let cont = 0; cont <= 10; cont++){
+
 // }
 
 
 
- let listaNomes = []
-// //                 0        1         2           3         4     5
-listaNomes.push("Hudson","Gabriel","Anderson", "Daniel", "Thiago")
 
-console.log(listaNomes[0])
+// let listaNomes = []
+// //                 0        1         2           3         4     5
+// listaNomes.push("Hudson","Gabriel","Anderson", "Daniel", "Thiago")
+
+// console.log(listaNomes[0])
 
 
 // //PARA(VARIAVEL CONTROLE; CONDICIONAL; INCREMENTO ){}
@@ -54,11 +61,84 @@ console.log(listaNomes[0])
 
 
 
-// function verificaTipo(dado){
+// function encontrarNumerosNegativos(array){
 
-//     if(typeof dado == "string"){
-//         console.log("É uma string")
-//     }else if(typeof dado == "number"){
-//         console.log("É uma number")
+//     let arrayNumerosNegativos = []
+
+//     for(let i = 0; i<array.length; i++){
+       
+//         if(array[i] < 0){
+
+//             arrayNumerosNegativos.push(array[i])
+            
+//         }
+    
 //     }
+//     return arrayNumerosNegativos
 // }
+
+// let retornoFuncao = encontrarNumerosNegativos([10,-1,23,43,564,-3,-10])
+
+//alert(retornoFuncao)
+
+
+
+// let listaNomes = []
+
+// listaNomes.push("Hudson","Gabriel","Anderson", "Daniel", "Thiago")
+
+// function encontrarNome(arrayNomes, nome){
+    
+
+//     for(let i = 0; i < arrayNomes.length; i++){
+        
+//         if(arrayNomes[i] == nome){
+
+//             return  arrayNomes[i]
+       
+//         }
+//     }
+
+// }
+// let nomeEncontrado  = encontrarNome(listaNomes, "Anderson")
+// console.log(nomeEncontrado)
+
+
+
+
+// function findLongest(str) {
+  
+//     let spl = str.split(" ");
+//     let longest = 0
+    
+//     for (let i = 0; i > spl.length; i++) {
+
+//       if (spl[i].length > longest) {
+//         longest = spl[i].length
+//       }
+
+
+//     }
+//       return longest
+// }
+  
+
+// let numero = 0
+
+
+// function teste(numero){
+
+    
+
+// }
+
+//              0       1      2           3      
+// let nome = ["Hudson", "Ana", "Eduardo", "Daniel"]
+
+
+// for(let i = 0; i <= nome.length; i++){
+
+//     nome[i]
+    
+// }
+
