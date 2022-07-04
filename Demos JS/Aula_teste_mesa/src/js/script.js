@@ -47,3 +47,39 @@ contarNumeromax(10)
 
 
 
+//UNIDIMIENSIONAL 
+let array = [1,2,3,4]
+
+//BIDIMENSIONAL
+let array2  = [[],[],[]]
+
+//MULTIDIMENSIONAL
+let array3 = [
+    [[]],[[]],[[]],[[]],
+    [[]],[[]],[[]],[[]],
+]
+
+//ARRAY DE NOTAS 
+const arrayNotas = [
+    [90,30,10,20],
+    [30,50,60,70],
+    [56,34,40,50],
+    [67,76,45,67],
+]
+
+console.table(arrayNotas)
+
+//0) ACESSAR
+//1) ADICIONAR 
+//2) SUBSTITUIR
+
+//ACESSAR COLUNA
+// for(let i = 0; i < arrayNotas.length;i++){
+//     console.log(arrayNotas[i][1])
+// }
+
+
+//ACESSAR COLUNA VERTICAL
+for(let i = 0; i < arrayNotas.length;i++){
+    console.log(arrayNotas[i][i])
+}
