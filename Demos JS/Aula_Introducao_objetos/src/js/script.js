@@ -128,39 +128,53 @@ for(let chave in produto){
 // console.log(listaTarefas)
 
 
-// function pessoa(nome, idade, cpf){
+function pessoa(nome, idade, cpf){
 
-//     let novaPessoa = {
+    let novaPessoa = {
+        nome:nome,
+        idade:idade,
+        cpf:cpf,
+       
+    }
 
-//     }
-
-//     return novaPessoa
-// }
+    return novaPessoa
+}
 
 //CONSTRUINDO OBJETO
-// function Pessoa(nome, idade, cpf){
+function Frutas(nome, frutas, cpf){
     
-//     //RETORNANDO UM OBJETO
-//     return {
-//         nome:nome,
-//         idade:idade,
-//         cpf:cpf
-//     }
+    //RETORNANDO UM OBJETO
+    return {
+        nome:nome,
+        idade:idade,
+        cpf:cpf,
+        categorias: []
+    }
+}
 
-//     // return {
-//     //     nome,
-//     //     idade,
-//     //     cpf
-//     // }
-// }
+function Pessoa(nome, idade, cpf){
+    
+    //RETORNANDO UM OBJETO
+    return {
+        nome:nome,
+        idade:idade,
+        cpf:cpf,
+        sexo:"M"
+        
+    }
+}
+
+Pessoa()
 
 
-// const novaPessoa = Pessoa("Nome",24,"108.266.34-36")
 
-// let listaPessoas = []
-// listaPessoas.push(novaPessoa)
 
-// console.log(listaPessoas)
+
+
+let secaoFrutas = []
+let secaoBedias = []
+
+
 
 
 
@@ -268,4 +282,12 @@ function retornarProdutosForaEstoque(arrayProdutos){
 
 let produtosEstoqueFiltrado =retornarProdutosForaEstoque(listasProdutos)
 
-console.log(produtosEstoqueFiltrado)
+//console.log(produtosEstoqueFiltrado)
+
+
+const pessoa2 ={
+
+    nome: "Hudson"
+}
+
+delete pessoa2.nome
