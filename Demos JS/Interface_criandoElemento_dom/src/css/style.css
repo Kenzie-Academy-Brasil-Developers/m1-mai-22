@@ -1,0 +1,88 @@
+/*
+Theme Name: App
+Theme URI: http://www.hudsoncarolino.com.br
+Author: Hudson Carolino
+Author URI: https://hudsoncarolino.com.br;
+Description: DescriÃ§Ã£o do thema.
+Version: 1.0
+
+--------------------------------------------
+ESTRUTURAÃ‡ÃƒO BASE
+--------------------------------------------
+**** DECLARAÃ‡ÃƒO DE VARIÃVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÃGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+/* ESTILOS GERAIS */
+html, body, figure, header,img, div, section, article, input, button, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a,form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* list-style: none; */
+    text-decoration: none;
+    font-family: var(--font-openSans);
+    color: #747474;
+    
+
+}
+body{
+    background-color:#f1f1f1;
+}
+section{
+    max-width: 1000px;
+    margin: 20px auto;
+}
+section h2{
+    margin-bottom: 40px;
+}
+img{
+    max-width: 100%;
+}
+
+.produtos{
+    display: flex;
+    justify-content: space-between;
+}
+.produtos li{
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 280px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.produtos li img{}
+.produtos li h2{
+    font-size: 13px;
+}
+.produtos li p{
+    margin-top: 10px;
+}
+.produtos li button{
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 5px 50px;
+    border-radius: 3px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.destacar{
+    background-color: aquamarine;
+}
+
+img{
+    width: 50px;
+}

@@ -74,3 +74,40 @@ console.dir(h2)
 //h2.classList.remove()
 
  
+
+
+let array = [
+    {
+        nome:"Carro1",
+        acessorios:["Alarme", "vidro", "Trava"]
+    },
+    {
+        nome:"Carro1",
+        acessorios:["Alarme","Trava"]
+    },
+    {
+        nome:"Carro3",
+        acessorios:["Alarme", "vidro", "Trava"]
+    }
+]
+
+function filtrarPorAcessorios(acessorios){
+
+    let carrosFiltrados = []
+
+    for(let i = 0; array.length; i++){
+
+        let carroAtual  = array[i]
+
+
+        for(let i = 0; i<carroAtual.acessorios.length; i++){
+
+        }
+
+
+    }
+
+
+}
+
+filtrarPorAcessorios("Alarme, vidro")
