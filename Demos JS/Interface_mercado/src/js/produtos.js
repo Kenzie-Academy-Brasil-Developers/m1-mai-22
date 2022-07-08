@@ -3,7 +3,7 @@ const produtos = [
         nome:"Limão Siciliano Kg",
         preco:12.76,
         departamento: "hortifruti",
-        oferta:false,
+        oferta:true,
         estoque: true,
         imgeUrl:"limao.webp"
     },

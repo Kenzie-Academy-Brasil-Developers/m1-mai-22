@@ -53,6 +53,7 @@ img{
 
 .produtos{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .produtos li{
@@ -62,6 +63,20 @@ img{
     min-height: 280px;
     margin-bottom: 20px;
     padding: 10px;
+    width: 100%;
+    position: relative;
+}
+.produtos li.oferta::before{
+    content: "Oferta";
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(255, 187, 0);
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 .produtos li img{}
 .produtos li h2{
