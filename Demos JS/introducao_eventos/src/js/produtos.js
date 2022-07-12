@@ -5,7 +5,7 @@ const produtos = [
         preco:12.76,
         departamento: "hortifruti",
         oferta:true,
-        estoque: true,
+        estoque: false,
         imgeUrl:"limao.webp"
     },
     {
@@ -45,6 +45,7 @@ const produtos = [
         imgeUrl:"macarrao.png"
     },
     {
+        id:5,
         nome:"Macarrão Galo Sêmola Espaguete nº8 500g",
         preco:4.42,
         departamento:"massa",
@@ -53,6 +54,7 @@ const produtos = [
         imgeUrl:"macarrao2.webp"
     },
     {
+        id:6,
         nome:"Macarrão Instantâneo Nissin Lámen Galinha Caipira 85g",
         preco:2.56,
         departamento:"massa",
@@ -61,6 +63,7 @@ const produtos = [
         imgeUrl:"macarrao3.webp"
     },
     {
+        id:7,
         nome:"Cup Noodles Nissin Galinha Caipira 69g",
         preco:5.14,
         departamento:"massa",
@@ -69,6 +72,7 @@ const produtos = [
         imgeUrl:"nissin.webp"
     },
     {
+        id:8,
         nome:"Água Mineral Ouro Fino com Gás 500ml",
         preco:1.95,
         departamento:"bebidas",
@@ -77,6 +81,7 @@ const produtos = [
         imgeUrl:"agua.webp"
     },
     {
+        id:9,
         nome:"Refrigerante Coca-Cola Sem Açúcar 200ml",
         preco:1.21,
         departamento:"bebidas",
@@ -85,6 +90,7 @@ const produtos = [
         imgeUrl:"Refrigerante.webp"
     },
     {
+        id:10,
         nome:"Refrigerante Antarctica Guaraná sem Açúcar Lata 350ml",
         preco:2.29,
         departamento:"bebidas",
@@ -93,6 +99,7 @@ const produtos = [
         imgeUrl:"Refrigerante1.webp"
     },
     {
+        id:11,
         nome:"Refrigerante Coca-Cola Sabor Original 220ml",
         preco:2.15,
         departamento:"bebidas",

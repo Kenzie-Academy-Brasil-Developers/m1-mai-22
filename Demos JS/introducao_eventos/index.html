@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./src/css/style.css">
         <script defer src="./src/js/produtos.js"></script>
         <script defer src="./src/js/script.js"></script>
+        <script defer src="/src/js/eventos.js"></script>
         <title>Introdução ao Js</title>
     </head>
     <body>
@@ -22,11 +23,25 @@
                 <button>Pesquisar</button>
             </section>
 
-            <section>
-                <h2>Produtos</h2>
-                <ul class="produtos"></ul>
-            </section>
+            <div class="container">
+                <section>
+                    <h2>Produtos</h2>
+                    <ul class="produtos"></ul>
+                </section>
 
+                <section class="carrinho">
+                    <h2>Carrinho</h2>
+                   
+                    <ul></ul>
+
+                    <div class="carrinho_info">
+                        <p><strong>QTD Produtos:</strong> 10</p>
+                        <p><strong>Preço total:</strong> R$ 200,00</p>
+                        <button>Finalizar comprar</button>
+                    </div>
+
+                </section>
+            </div>
         </main>
     </body>
 </html>

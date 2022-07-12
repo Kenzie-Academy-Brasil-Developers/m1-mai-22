@@ -1,11 +1,15 @@
 
 let secaoProdutos = document.querySelector(".produtos")
+let secaoCarrinho = document.querySelector(".carrinho ul")
 
-//LISTAR OS PRODUTOS
-function listarProdutos(listaProdutos){
+
+//********************************** */
+    //LISTAR OS PRODUTOS//
+//********************************** */
+function listarProdutos(listaProdutos, secao){
 
     //ANTES DE LISTAR QUALQUER PRODUTO => PRECISO GARANTIR QUE MINHA VITRINE VAI ESTAR VAZIA
-    secaoProdutos.innerHTML = ""
+    secao.innerHTML = ""
     
     //LOOP PARA PERCORRER OS PRODUTOS
     for(let i = 0; i<listaProdutos.length; i++){
@@ -17,15 +21,18 @@ function listarProdutos(listaProdutos){
         let cardProduto    = criarCardProduto(produto)
     
         //PENDURANDO O CARD DE PRODUTO NA LISTA => HTML
-        secaoProdutos.appendChild(cardProduto)
+        secao.appendChild(cardProduto)
 
     }
    
 }
-listarProdutos(produtos)
+listarProdutos(produtos, secaoProdutos)
 
 
-//CRIANDO O CARD DE PRODUTO
+
+//********************************** */
+    //CRIANDO O CARD DE PRODUTO//
+//********************************** */
 function criarCardProduto(produto){
 
     //1) ACESSAR OS DADOS DO PRODUTO 
@@ -41,7 +48,7 @@ function criarCardProduto(produto){
     let tagNome     = document.createElement("h2")
     let tagPreco    = document.createElement("p")
     let btnComprar  = document.createElement("button")
-    
+   
     //ADICIONANDO ID NO BOTÃO
     if(id != undefined){
 
@@ -74,15 +81,91 @@ function criarCardProduto(produto){
     return tagLi
 }
 
+//*************************************** */
+    //ADICIONAR PRODUTOS NO CARRINHO//
+//********************* ******************/
+secaoProdutos.addEventListener("click", interceptandoProduto)
 
+let carrinhoCompras = []
+
+//CRIAR UM ARRAY DE CARRINHO 
+//RECEBER ESSES PRODUTOS
+function interceptandoProduto(event){
+
+    let btnComprar  = event.target
+    
+    if(btnComprar.tagName == "BUTTON"){
+
+        //IDENTIFICANDO PRODUTO PELO (ID)
+        let idProduto = btnComprar.id
+
+        //VERIFICANDO SE PRODUDO ESTÁ NA BASE
+        let produto = produtos.find(function(produto){
+
+            if(produto.id == idProduto && produto.estoque == true){
+                return produto
+            }
+            
+        })
+
+        //FUNÇÃO ADICIONAR PRODUTO NO CARRINHO
+        adicionarCarrinho(produto)
+
+    }
+
+}
+
+//FUNÇÃO ADICIONAR PRODUTO NO CARRINHO
+function adicionarCarrinho(produto){
+
+    if(produto !== undefined){
+        carrinhoCompras.push(produto)
+
+        listarProdutos(carrinhoCompras,secaoCarrinho)
+    }
+ 
+}
+
+//
+function removerProdutoCarrinho(){
+    //INTERCEPTAR O CLIQUE NO CARRINHO => addEventListener
+    //IDENTIFICAR O PRODUTO
+    //ENCONTRAR ESSE PRODUTO DENTRO DO CARRINHO => carrinhoCompras
+    //ENCONTRAR O INDEX => indexOf 
+    //APLICAR O SPLICE 
+    //LISTAR NOVAMENTE NA SEÇÃO CARRINHO => listarProdutos(carrinhoCompras,secaoCarrinho)
+}
+
+
+// function adicionarProdutoCarrinho(event){
+
+//     //event.target => QUEM RECEBEU O CLIQUE(EVENTO)
+//     //event.currentTarget => QUEM ESTÁ COM O addEventListener(INTERCEPTADOR)
+
+//     let btnComprar  = event.target
+    
+//     //VERIFICANDO SE O CLIQUE FOI EM UM BOTÃO => PELA PROPRIEDADE TAGNAME 
+//     if(btnComprar.tagName == "BUTTON"){
+      
+        
+//        let produto  = btnComprar.closest("li").cloneNode(true)
+//        carrinho.appendChild(produto)
+
+//     }
+
+// }
+
+
+
+
+
+
+//********************* */
+    //PESQUISA//
+//********************* */
 // ÁREA DE PESQUISA 
 let inputBusca  = document.querySelector(".campoBusca input")
 let btnBusca    = document.querySelector(".campoBusca button")
-
-//1) interceptar o clique no button
-//2) pegar as informações digitadas pelo usuário(pesquisa)
-//3) preciso fazer uma busca no array do produto
-//4) Preciso retornar esse produto na tela 
 
 btnBusca.addEventListener("click", function(){
     
@@ -93,12 +176,12 @@ btnBusca.addEventListener("click", function(){
     let resultadoBusca  = busca(pesquisaUsuario)
 
     //LISTAR NA TELA
-    listarProdutos(resultadoBusca)
+    listarProdutos(resultadoBusca, secaoProdutos)
 
 })
 
 function busca(valorPesquisa){
-   
+    
     let resultBusca = []
 
     for(let i = 0; i<produtos.length; i++){
