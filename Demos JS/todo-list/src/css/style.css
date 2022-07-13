@@ -1,0 +1,152 @@
+/*
+Theme Name: App
+Theme URI: http://www.hudsoncarolino.com.br
+Author: Hudson Carolino
+Author URI: https://hudsoncarolino.com.br;
+Description: DescriÃ§Ã£o do thema.
+Version: 1.0
+
+--------------------------------------------
+ESTRUTURAÃ‡ÃƒO BASE
+--------------------------------------------
+**** DECLARAÃ‡ÃƒO DE VARIÃVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÃGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+/* GERAL */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body, figure, img, button,div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul,li, a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    outline: none;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+section{
+    background-color: #2196f3;
+    max-width: 560px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+}
+section h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+section .form{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+section .form input{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+}
+section .form button{
+    height: 40px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: solid 1px #fff;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+section .form button:hover{
+    background-color:#2196f3;
+    color: #fff;
+    border-color:#fff ;
+}
+nav{
+    margin-top: 25px;
+}
+section nav button{
+    height: 25px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: solid 1px #fff;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+section nav button:hover{
+    background-color:#2196f3;
+    color: #fff;
+    border-color:#fff ;
+} 
+section ul{
+    margin-top: 25px;
+}
+section ul li{
+    padding: 15px;
+    background-color: #fefeff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 7px 12px -2px rgb(0 0 0 / 57%);
+    -moz-box-shadow: 0px 7px 12px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 12px -2px rgb(0 0 0 / 46%);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+section ul li h2{
+    font-weight: 300;
+    font-size: 19px;
+}
+section ul li.remover{
+    opacity: 0;
+    transition: 1s;
+}
+section ul li button{
+    background-color: #be0000;
+    border: solid 1px #be0000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(-40px);
+}
+section ul li:hover button{
+    transition: 0.3s;
+    transform: translateX(-5px);
+}
+
+
+
