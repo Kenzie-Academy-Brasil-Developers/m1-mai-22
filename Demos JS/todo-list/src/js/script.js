@@ -2,11 +2,12 @@
 let inputText       = document.querySelector(".inputText")
 let btnAdicionar    = document.querySelector(".btnAdicionar")
 let tagLista        = document.querySelector(".lista")
+let filtroTarefas   = document.getElementById("filtroTarefas") 
 
 //LISTA DE TAREFAS
 const listaTarefas = [
     {nome:"Terefa Modelo", status: false},
-  
+    {nome:"Terefa Modelo concluida", status: true},
 ]
 
 //FUNÇÃO ADICIONAR TAREFAS
@@ -38,25 +39,33 @@ function adicionarTarefa(){
 }
 btnAdicionar.addEventListener("click", adicionarTarefa)
 
-
 //LISTAR TAREFAS
-function listarTarefas(arrayTarefas, tagLista){
+function listarTarefas(arrayTarefas, tagLista, statusFiltro = false){
     
     //Limpar lista ⇒ inner.HTML
    tagLista.innerText = ""
-    
+   
     //Executar loop para recuperar cada uma das tarefas (for / forEach)
     for(let i = 0; i<arrayTarefas.length; i++){
         
         //RECUPERANDO TAREFA DO ARRAY
         let tarefa = arrayTarefas[i]
 
-        //RECUPERANDO TEMPLATE MONTADO
-        let template = montarTemplate(tarefa, i)
-        
-        //ADICIONANDO TEMPLATE PRONTO NA LISTA (HTML => UL)
-        tagLista.appendChild(template)
+        //LISTAR TAREFAS A PARTIR DO STATUS
+        if(tarefa.status == statusFiltro){
+            
+            //RECUPERANDO TEMPLATE MONTADO
+            let templateTarefa = montarTemplate(tarefa, i)
+            
+            //ADICIONANDO TEMPLATE PRONTO NA LISTA (HTML => UL)
+            tagLista.appendChild(templateTarefa)
+        }
     }
+    
+    // arrayTarefas.forEach(function(tarefa, index){
+    //     let templateTarefa = montarTemplate(tarefa, index)
+    //     tagLista.appendChild(templateTarefa)
+    // });
     
 }
 //LISTANDO TAREFAS ADICIONADAS
@@ -67,6 +76,11 @@ function montarTemplate(tarefa, index){
    
     //CRIANDO TAG LI
     let tagLi  = document.createElement("li")
+    let status = tarefa.status
+
+    if(status){
+        tagLi.classList.add("concluida")
+    }
     
     //ALIMENTANDO A TAG 
     tagLi.innerHTML = `
@@ -79,13 +93,8 @@ function montarTemplate(tarefa, index){
 
 }
 
-{/* <li>
-    <h2>TEste</h2>
-    <button id="1">X</button>
-</li> */}
-
 //REMOVER TAREFA 
-function removerTarefa(event){
+function concluirTarefa(event){
 
     //INTERCEPTANDO BOTÃO (REMOÇÃO)
     let btnRemover = event.target
@@ -93,24 +102,32 @@ function removerTarefa(event){
     //VERIFICANDO SE É UM BUTTON
     if(btnRemover.tagName == "BUTTON"){
 
-        btnRemover.parentElement.classList.add("remover")
-
         //RECUPERAR O ID
         let index = btnRemover.id
 
-        //REMOVENDO TAREFA DO ARRAY (POSICAO INDEX DA TAREFA, QTD DE ELEMENTOS QUE QUERO REMOVER)
-        listaTarefas.splice(index,1)
+        listaTarefas[index].status = true
+        
+        //listaTarefas.splice(index,1)
 
-        //LISTAR AS TAREFAS NOVAMENTE
-
-        setTimeout(function(){
-            listarTarefas(listaTarefas, tagLista)
-        },500)
+        listarTarefas(listaTarefas, tagLista)
         
     }
 
 }
-tagLista.addEventListener("click", removerTarefa)
+tagLista.addEventListener("click", concluirTarefa)
 
+let statusFiltro = false
+function filtrarTarefa(){
 
+    statusFiltro = !statusFiltro
+
+    if(statusFiltro){
+        filtroTarefas.innerText = "Tarefas concluidas"
+    }
+
+    filtroTarefas.innerText = "Tarefas não concluidas"
+    listarTarefas(listaTarefas, tagLista, statusFiltro)
+
+}
+filtroTarefas.addEventListener("click", filtrarTarefa)
 

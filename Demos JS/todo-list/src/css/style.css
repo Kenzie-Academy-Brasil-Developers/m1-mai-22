@@ -60,6 +60,7 @@ section .form{
     display: flex;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 section .form input{
     border: none;
@@ -67,7 +68,27 @@ section .form input{
     border-radius: 5px;
     height: 40px;
     padding: 10px;
+    margin-bottom: 5px;
 }
+section .form textarea{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+section .form select{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
 section .form button{
     height: 40px;
     border-radius: 5px;
@@ -148,5 +169,10 @@ section ul li:hover button{
     transform: translateX(-5px);
 }
 
-
+section ul li.concluida{
+    background-color: #9aa902;
+}
+section ul li.concluida h2{
+    color: #fff;
+}
 
