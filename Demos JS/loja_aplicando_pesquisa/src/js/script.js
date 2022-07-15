@@ -12,17 +12,23 @@ function listarProdutos(listaProdutos, secao){
     secao.innerHTML = ""
     
     //LOOP PARA PERCORRER OS PRODUTOS
-    for(let i = 0; i<listaProdutos.length; i++){
-        
-        //ACESSANDO CADA UM DOS PRODUTOS
-        let produto = listaProdutos[i]
+    if(listaProdutos.length >= 1){
 
-        //CRIANDO CARD DE PRODUTO => PASSO A RESPONSABILIDADE PARA OUTRA FUNÇÃO
-        let cardProduto    = criarCardProduto(produto)
     
-        //PENDURANDO O CARD DE PRODUTO NA LISTA => HTML
-        secao.appendChild(cardProduto)
+        for(let i = 0; i<listaProdutos.length; i++){
+            
+            //ACESSANDO CADA UM DOS PRODUTOS
+            let produto = listaProdutos[i]
 
+            //CRIANDO CARD DE PRODUTO => PASSO A RESPONSABILIDADE PARA OUTRA FUNÇÃO
+            let cardProduto    = criarCardProduto(produto)
+        
+            //PENDURANDO O CARD DE PRODUTO NA LISTA => HTML
+            secao.appendChild(cardProduto)
+
+        }
+    }else{
+        console.log("Não encontramos")
     }
    
 }
@@ -126,7 +132,7 @@ function adicionarCarrinho(produto){
  
 }
 
-//
+
 function removerProdutoCarrinho(){
     //INTERCEPTAR O CLIQUE NO CARRINHO => addEventListener
     //IDENTIFICAR O PRODUTO
@@ -137,29 +143,6 @@ function removerProdutoCarrinho(){
 }
 
 
-// function adicionarProdutoCarrinho(event){
-
-//     //event.target => QUEM RECEBEU O CLIQUE(EVENTO)
-//     //event.currentTarget => QUEM ESTÁ COM O addEventListener(INTERCEPTADOR)
-
-//     let btnComprar  = event.target
-    
-//     //VERIFICANDO SE O CLIQUE FOI EM UM BOTÃO => PELA PROPRIEDADE TAGNAME 
-//     if(btnComprar.tagName == "BUTTON"){
-      
-        
-//        let produto  = btnComprar.closest("li").cloneNode(true)
-//        carrinho.appendChild(produto)
-
-//     }
-
-// }
-
-
-
-
-
-
 //********************* */
     //PESQUISA//
 //********************* */
@@ -167,19 +150,23 @@ function removerProdutoCarrinho(){
 let inputBusca  = document.querySelector(".campoBusca input")
 let btnBusca    = document.querySelector(".campoBusca button")
 
-btnBusca.addEventListener("click", function(){
+//btnBusca.addEventListener("click", function(){
+
+inputBusca.addEventListener("keyup", function(event){
     
-    //RECEBENDO O VALOR DO USUÁRIO
-    let pesquisaUsuario = inputBusca.value
+    
+    if( event.keyCode == 13){
 
-    //PASSANDO PARA FAZER A BUSCA 
-    let resultadoBusca  = busca(pesquisaUsuario)
+        // //RECEBENDO O VALOR DO USUÁRIO
+        let pesquisaUsuario = inputBusca.value
 
-    //LISTAR NA TELA
-    listarProdutos(resultadoBusca, secaoProdutos)
+        //PASSANDO PARA FAZER A BUSCA 
+        let resultadoBusca  = busca(pesquisaUsuario)
 
-    inputBusca.value = ""
+        //LISTAR NA TELA
+        listarProdutos(resultadoBusca, secaoProdutos)
 
+    }
 })
 
 function busca(valorPesquisa){
@@ -188,7 +175,11 @@ function busca(valorPesquisa){
 
     for(let i = 0; i<produtos.length; i++){
         
-        if(valorPesquisa == produtos[i].nome){
+        let pesquisa    = valorPesquisa.toLowerCase()
+        let nomeProduto = produtos[i].nome.toLowerCase()
+        let departamento = produtos[i].departamento.toLowerCase()
+        
+        if(nomeProduto.includes(pesquisa) || departamento.includes(pesquisa)){
             
             resultBusca.push(produtos[i])
         
@@ -199,6 +190,19 @@ function busca(valorPesquisa){
 }
 
 
+
+// function calcularTotal(){
+
+//     let total  = 0
+//     for(carrinhoCompras){
+
+//         total += carrinhoCompras[i].preco
+
+//     }
+
+//     document.querySelector(".totalPreco").innerText = total
+
+// }
 
 
 

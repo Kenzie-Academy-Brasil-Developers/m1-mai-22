@@ -1,0 +1,190 @@
+/*
+Theme Name: App
+Theme URI: http://www.hudsoncarolino.com.br
+Author: Hudson Carolino
+Author URI: https://hudsoncarolino.com.br;
+Description: DescriÃ§Ã£o do thema.
+Version: 1.0
+
+--------------------------------------------
+ESTRUTURAÃ‡ÃƒO BASE
+--------------------------------------------
+**** DECLARAÃ‡ÃƒO DE VARIÃVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** HEADER
+**** FOOTER
+**** PÃGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Righteous', cursive;
+*/
+
+/* ESTILOS GERAIS */
+html, body, figure, header,img, div, section, article, input, button, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a,form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--font-openSans);
+    color: #747474;
+    
+
+}
+body{
+    background-color:#f1f1f1;
+}
+section{
+    max-width: 70%;
+    margin: 20px auto;
+}
+section h2{
+    margin-bottom: 40px;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+}
+.campoBusca{
+    display: flex;
+    justify-content: end;
+}
+.campoBusca input{
+    height: 26px;
+    padding: 10px;
+    width: 230px;
+    border: solid 1px #ccc;
+}
+.campoBusca button{
+    border: solid 1px #ccc;
+    background: #fff;
+    padding: 0 10px;
+}
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ul li{
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 280px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+ul li.oferta::before{
+    content: "Oferta";
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(255, 187, 0);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+ul li img{}
+ul li h2{
+    font-size: 13px;
+}
+ul li p{
+    margin-top: 10px;
+}
+ul li button{
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 5px 50px;
+    border-radius: 3px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+
+.carrinho{
+   width: 20%;
+   
+}
+
+.carrinho ul{
+    background-color: #fff;
+    height: 370px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.carrinho ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    min-height: initial;
+    border: solid #ccc 1px;
+    max-width: 100%;
+}
+.carrinho ul li.oferta::before{
+ 
+}
+.carrinho ul li img{
+    max-width: 57px;
+    height: 57px;
+}
+.carrinho ul li h2{
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+.carrinho ul li p{
+  width: 100px;
+}
+.carrinho ul li button{
+    background-color: #f44336;
+    padding:0;
+    position: absolute;
+    right: 10px;
+    width: 29px;
+    height: 29px;
+    border-radius: 100%;
+    top: -5px;
+    opacity: 0;
+    color: transparent;
+    line-height: 29px;
+}
+.carrinho ul li button::before{
+    content: "X";
+    display: block;
+    color: #fff;
+}
+.carrinho ul li:hover button{
+   opacity: 1;
+}
+.carrinho_info{
+    background-color: #fff;
+    padding: 10px;
+    min-height: 160px;
+}
+.carrinho_info p{
+    margin-bottom: 10px;
+} 
+.carrinho_info button{
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 10px;
+    float: right;
+    border-radius: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 40px;
+} 
+
